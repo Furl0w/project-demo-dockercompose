@@ -1,0 +1,4 @@
+serverPy/venv
+serverPy/__pycache__
+
+serverDB/vendor

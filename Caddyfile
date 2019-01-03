@@ -1,0 +1,4 @@
+localhost:9090 {
+    tls off
+    proxy / localhost:3030
+}

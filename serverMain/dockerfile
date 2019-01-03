@@ -1,0 +1,10 @@
+FROM golang:1.10-alpine as builder
+
+COPY *.go /app/
+WORKDIR /app
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w' -o serverMain *.go
+
+FROM scratch
+
+COPY --from=builder /app/serverMain /app/serverMain
+CMD ["/app/serverMain"]
