@@ -10,13 +10,14 @@ Deployed in development mode (on host 0.0.0.0) in an alpine container
 
 ## Mongo
 
+TODO : add a volume to store the data
+
 Not directly accessible from the host (only reachable in the docker network).
 If you want to reach directly the database you can either use :
  - docker exec -it CONTAINER_ID /bin/sh and then run mongo
- - add the lines under the mongo service to the docker compose to do a port       mapping :
-    ports:
-     - "27017:27017"
-TODO : add a volume to store the data
+ - add the lines under the mongo service to the docker compose to do a port mapping :
+    - ports:
+      - \- "27017:27017"
 
 ## Testing
 
