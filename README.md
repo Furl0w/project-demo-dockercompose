@@ -29,5 +29,6 @@ To ensure everything works :
 - localhost:5000 from your browser should answer Hello world ! (flask)
 - localhost:3030 from your browser should answer Hello world form path / (serverMain)
 - localhost:3030/checkDB from your browser should answer with a successfull connection to the DB (serverMain + serverDB + Mongo)
+- localhost:3030/testMobile return the json he has received from a post (test for mobile dev)
 
 You can also run $sudo Caddy to enable the reverse proxy Caddy from the Caddyfile, in that case just replace the 3030 by 9090.
